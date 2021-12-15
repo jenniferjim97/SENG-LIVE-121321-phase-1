@@ -1,14 +1,14 @@
-// ❗ Use console.log() To Check Answers
+//❗ Use console.log() To Check Answers
 
 // ✅ Using console.log()
 
-    // console.log("Hey there!");
+    console.log("Hey there!");
 
-    // let playerStatus = "stopped";
+    let playerStatus = "stopped";
 
-    // let currentSong = null;
+    let currentSong = null;
 
-    // console.log("player status is", playerStatus);
+    console.log("player status is", playerStatus);
 
 // ✅ JS Data Types (Primitive)
 
@@ -135,24 +135,23 @@ console.log("------------------------");
 
     // this line of code generates a random number between 0 and 24 and assigns its value to `time`
     const time = Math.ceil(Math.random()*24);
-    // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
-    // if (❓) {
+    // // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
+    // if (time < 12) {
 
-        // console.log(`${time} is in the AM.`)
-
-    // In all other cases...
+    //     console.log(`${time} is in the AM.`)
     // } else {
 
-        // console.log(`${time} is in the PM.`)
+    //     console.log(`${time} is in the PM.`)
 
     // }
-    // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
+    // // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
 
 
 
-    // // ✨ BONUS: Try refactoring the above expression using a ternary operator.
+    // // // ✨ BONUS: Try refactoring the above expression using a ternary operator.
 
-    // // ternary version
+    // // // ternary version
+    // console.log(`${time} is in the ${time < 12 ? 'AM': 'PM'}.`);
     
 
     // // 🚨 Be sure to comment out any code above before proceeding to the next activity.
@@ -174,14 +173,14 @@ console.log("------------------------");
 
     // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
 
-    // ____ today = new Date();
-    // ____ year = today.getFullYear();
-    // ____ month = today.getMonth();
-    // ____ day = today.getDate();
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth()+1;
+    let day = today.getDate();
 
-    // ____ yesterday = new Date(`${year}-${month}-${day-1}`);
-    // ____ tomorrow = new Date(`${year}-${month}-${day+1}`);
-    // ____ otherDate = yesterday;
+     const yesterday = new Date(`${year}-${month}-${day-1}`);
+     const tomorrow = new Date(`${year}-${month}-${day+1}`);
+     const otherDate = yesterday;
 
     // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
 
@@ -193,23 +192,19 @@ console.log("------------------------");
 
     // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
 
-    // if (____) {
-    //     console.log('This date is in the past')
-    // } else if (____) {
-    //     console.log('This date is in the future')
-    // } else {
-    //     console.log('This date is today!')
-    // }
-
-    // otherDate = tomorrow;
-    
-    // if (____) {
-    //     console.log('This date is in the past')
-    // } else if (____) {
-    //     console.log('This date is in the future')
-    // } else {
-    //     console.log('This date is today!')
-    // }
+   function compareDateToToday (otherDate){
+    if (otherDate < today) {
+        console.log('This date is in the past')
+    } else if (otherDate > today) {
+        console.log('This date is in the future')
+    } else {
+        console.log('This date is today!')
+    }
+}
+compareDateToToday(yesterday);
+compareDateToToday(tomorrow);
+compareDateToToday(otherDate);
+   
 
     // // 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧 🚧
    
